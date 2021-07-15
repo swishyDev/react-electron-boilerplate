@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
 
@@ -9,9 +9,13 @@ function createWindow () {
     height: 600,
     minWidth: 700,
     minHeight: 500,
+    maxWidth: 900,
+    maxHeight: 800,
     titleBarStyle: "hidden",
     webPreferences: {
+      enableRemoteModule: true,
       nodeIntegration: true,
+      nodeIntergrationInWorker: true
     }
   })
 
